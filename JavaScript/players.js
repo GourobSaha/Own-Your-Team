@@ -16,7 +16,8 @@ function displayPlayer(updatedPlayers) {
         tableBody.appendChild(tr);
     }
     else {
-        alert('You can select 5 players only!')
+        alert('You can select 5 players only!');
+        return;
     }
 
 }
