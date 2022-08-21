@@ -8,6 +8,9 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy-UI  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/702363be04.js" crossorigin="anonymous"></script>
 
@@ -56,8 +59,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -74,8 +76,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -92,8 +93,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -110,8 +110,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -128,8 +127,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -146,8 +144,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -164,8 +161,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -182,8 +178,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -200,8 +195,7 @@
                             </p>
                         </div>
                         <div class="px-6 pt-1 pb-2 text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-12 w-1/2">
+                            <button class="btn btn-outline btn-warning mt-12 w-1/2" onclick="playerSelection(this)">
                                 Select
                             </button>
                         </div>
@@ -209,54 +203,54 @@
                 </div>
             </section>
             <!-- Total Players  -->
-            <section class="w-1/4 px-6 flex flex-col gap-4">
-                <div class="max-w-sm rounded-lg overflow-hidden shadow-lg p-6 bg-slate-900">
-                    <h1 class="text-4xl text-center text-amber-300">Best Five</h1>
-                    <div class="overflow-x-auto mt-6">
-                        <table class="table table-zebra w-full text-xl  text-amber-200 text-center">
-                            <!-- head -->
-                            <thead>
-                                <tr>
-                                    <th>No.</th>
-                                    <th>Players Name</th>
-                                </tr>
-                            </thead>
-                            <tbody id="selected-players">
+            <section class="w-1/4 px-6">
+                <div class="sticky top-0">
+                    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg p-6 bg-slate-900 mb-6">
+                        <h1 class="text-4xl text-center text-amber-300">Best Five</h1>
+                        <div class="overflow-x-auto mt-6">
+                            <table class="table table-zebra w-full text-xl  text-amber-200 text-center">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Players Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="selected-players">
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
-                <!-- Players and Total Expenses  -->
-                <div class="max-w-sm rounded-lg overflow-hidden shadow-lg p-6 bg-slate-900">
-                    <h1 class="text-4xl text-center text-amber-300">Budget</h1>
-                    <div class="overflow-x-auto mt-6 text-amber-100 text-xl">
-                        <div class="flex items-center">
-                            <p class="w-2/5">Per Player :</p>
-                            <input class="w-3/5 h-8" type="number">
+                    <!-- Players and Total Expenses  -->
+                    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg p-6 bg-slate-900">
+                        <h1 class="text-4xl text-center text-amber-300">Budget</h1>
+                        <div class="overflow-x-auto mt-6 text-amber-100 text-xl">
+                            <div class="flex items-center">
+                                <p class="w-2/5">Per Player :</p>
+                                <input class="w-3/5 h-8 text-amber-700 p-2" type="number">
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-outline btn-warning mt-6 w-1/2">
+                                    Calculate
+                                </button>
+                            </div>
+                            <p class="my-6">Players Expenses : $<span>00</span></p>
+                            <div class="flex items-center my-6">
+                                <p class="w-2/5">Manager :</p>
+                                <input class="w-3/5 h-8 text-amber-700 p-2" type="number">
+                            </div>
+                            <div class="flex items-center my-6">
+                                <p class="w-2/5">Coach :</p>
+                                <input class="w-3/5 h-8 text-amber-700 p-2" type="number">
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-outline btn-warning w-3/4">
+                                    Calculate Total
+                                </button>
+                            </div>
+                            <p class="my-6">Total Expenses : $<span>00</span></p>
                         </div>
-                        <div class="text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-6 w-1/2">
-                                Calculate
-                            </button>
-                        </div>
-                        <p class="my-6">Players Expenses : $<span>00</span></p>
-                        <div class="flex items-center my-6">
-                            <p class="w-2/5">Manager :</p>
-                            <input class="w-3/5 h-8" type="number">
-                        </div>
-                        <div class="flex items-center my-6">
-                            <p class="w-2/5">Coach :</p>
-                            <input class="w-3/5 h-8" type="number">
-                        </div>
-                        <div class="text-center">
-                            <button
-                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded w-3/4">
-                                Calculate Total
-                            </button>
-                        </div>
-                        <p class="my-6">Total Expenses : $<span>00</span></p>
                     </div>
                 </div>
             </section>
