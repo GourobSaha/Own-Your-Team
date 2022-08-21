@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="Images/icons/favicon.png" type="image/x-icon">
 </head>
 
-<body>
+<body class="bg-slate-700">
     <!-- Header Started -->
     <header>
         <section class="flex gap-4 bg-slate-900">
@@ -39,8 +39,8 @@
     </header>
     <!-- Header Ended -->
     <!-- Main Section Started  -->
-    <main class="bg-slate-700">
-        <section class="w-10/12 flex p-6 mx-auto">
+    <main>
+        <section class="w-10/12 flex p-6 mx-auto my-24">
             <section class="w-9/12 grid grid-cols-3 gap-4">
                 <!-- card-1  -->
                 <div class="max-w-sm rounded-lg overflow-hidden shadow-lg p-6 bg-slate-900">
@@ -205,11 +205,12 @@
                     </div>
                 </div>
             </section>
-            <section class="w-1/4 px-6">
+            <!-- Total Players  -->
+            <section class="w-1/4 px-6 flex flex-col gap-4">
                 <div class="max-w-sm rounded-lg overflow-hidden shadow-lg p-6 bg-slate-900">
                     <h1 class="text-4xl text-center text-amber-300">Best Five</h1>
                     <div class="overflow-x-auto mt-6">
-                        <table class="table table-zebra w-full text-amber-200 text-center">
+                        <table class="table table-zebra w-full text-xl  text-amber-200 text-center">
                             <!-- head -->
                             <thead>
                                 <tr>
@@ -221,6 +222,38 @@
 
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <!-- Players and Total Expenses  -->
+                <div class="max-w-sm rounded-lg overflow-hidden shadow-lg p-6 bg-slate-900">
+                    <h1 class="text-4xl text-center text-amber-300">Budget</h1>
+                    <div class="overflow-x-auto mt-6 text-amber-100 text-xl">
+                        <div class="flex items-center">
+                            <p class="w-2/5">Per Player :</p>
+                            <input class="w-3/5 h-8" type="number">
+                        </div>
+                        <div class="text-center">
+                            <button
+                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded mt-6 w-1/2">
+                                Calculate
+                            </button>
+                        </div>
+                        <p class="my-6">Players Expenses : $<span>00</span></p>
+                        <div class="flex items-center my-6">
+                            <p class="w-2/5">Manager :</p>
+                            <input class="w-3/5 h-8" type="number">
+                        </div>
+                        <div class="flex items-center my-6">
+                            <p class="w-2/5">Coach :</p>
+                            <input class="w-3/5 h-8" type="number">
+                        </div>
+                        <div class="text-center">
+                            <button
+                                class="bg-transparent hover:bg-amber-500 text-amber-200 font-semibold hover:text-white py-2 px-4 border border-amber-200 hover:border-transparent rounded w-3/4">
+                                Calculate Total
+                            </button>
+                        </div>
+                        <p class="my-6">Total Expenses : $<span>00</span></p>
                     </div>
                 </div>
             </section>
