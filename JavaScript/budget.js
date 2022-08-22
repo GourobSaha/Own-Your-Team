@@ -15,7 +15,7 @@ document.getElementById('calculate-player-cost').addEventListener('click', funct
         return;
     }
     else {
-        const totalPlayerCost = totalPlayer * perPlayerCost;
+        const totalPlayerCost = (totalPlayer * perPlayerCost).toFixed(2);
         setTextElementValueById("total-player-cost", totalPlayerCost);
         return totalPlayerCost;
     }
@@ -27,16 +27,9 @@ document.getElementById("calculate-total-cost").addEventListener('click', functi
     const managerCost = getInputFieldValueById("manager-cost");
     const coachCost = getInputFieldValueById("coach-cost");
 
-    if (totalPlayer === 0) {
-        alert('You have to select one player')
-        return;
-    }
-    else if (managerCost < 0 || coachCost < 0) {
+
+    if (managerCost < 0 || coachCost < 0) {
         alert('Input value should be positive');
-        return;
-    }
-    else if (totalPlayerCost === 0) {
-        alert('Calculate total player cost first')
         return;
     }
     else if (isNaN(managerCost)) {
@@ -49,7 +42,7 @@ document.getElementById("calculate-total-cost").addEventListener('click', functi
     }
     else {
 
-        const totalCost = totalPlayerCost + managerCost + coachCost;
+        const totalCost = (totalPlayerCost + managerCost + coachCost).toFixed(2);
         setTextElementValueById("total-cost", totalCost);
         return totalCost;
     }
