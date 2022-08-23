@@ -1,5 +1,8 @@
 // Total player cost calculation
 document.getElementById('calculate-player-cost').addEventListener('click', function () {
+    if (players.length > 5) {
+        players.length = 5
+    }
     const totalPlayer = players.length;
     const perPlayerCost = getInputFieldValueById("per-player-cost");
     if (totalPlayer === 0) {
@@ -22,7 +25,6 @@ document.getElementById('calculate-player-cost').addEventListener('click', funct
 })
 // Total expense calculation
 document.getElementById("calculate-total-cost").addEventListener('click', function () {
-    const totalPlayer = players.length;
     const totalPlayerCost = getElementValueById("total-player-cost");
     const managerCost = getInputFieldValueById("manager-cost");
     const coachCost = getInputFieldValueById("coach-cost");
